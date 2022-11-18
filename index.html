@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>StarBucks</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section>
+      <div class="circle"></div>
+      <header>
+        <a href="#" class="logo"><img src="logo.png" alt="" /></a>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Products</a></li>
+        </ul>
+      </header>
+      <div class="content">
+        <div class="textBox">
+          <h2>It's not just Coffe <br />It's <span>Starbucks</span></h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
+            eligendi, doloribus amet nulla molestias nemo veritatis praesentium
+            minima ipsam magnam aut. Amet odit sed nesciunt. Tenetur ullam,
+            recusandae libero magni labore cumque ea quod saepe deserunt
+            repudiandae culpa quidem cum.
+          </p>
+          <a href="#">Learn More</a>
+        </div>
+        <div class="imgBox">
+          <img src="coffee.png" class="starbuck" alt="" />
+        </div>
+      </div>
+      <div class="thumb">
+        <ul>
+          <li>
+            <img
+              src="thumb1.png"
+              alt=""
+              onclick="imgSlider('coffee.png');changeCircleColor('#017143')"
+            />
+          </li>
+          <li>
+            <img
+              src="thumb1.png"
+              alt=""
+              onclick="imgSlider('tea.png');changeCircleColor('#eb7495')"
+            />
+          </li>
+          <li>
+            <img
+              src="thumb1.png"
+              alt=""
+              onclick="imgSlider('pink.png');changeCircleColor('#d752b1')"
+            />
+          </li>
+        </ul>
+        <!-- <ul class="sci">
+          <li>
+            <a href="#"><img src="thumb1.png" alt="" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="thumb1.png" alt="" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="thumb1.png" alt="" /></a>
+          </li>
+        </ul> -->
+      </div>
+    </section>
+
+    <script>
+      function imgSlider(anything) {
+        document.querySelector('.starbuck').src = anything
+      }
+
+      function changeCircleColor(color) {
+        const circle = document.querySelector('.circle')
+        circle.style.background = color
+      }
+    </script>
+  </body>
+</html>
